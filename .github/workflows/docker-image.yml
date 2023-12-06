@@ -19,7 +19,8 @@ jobs:
         CR_PAT: ${{ secrets.CR_PAT }}
     - name: Build the Docker image
       run: | 
-        docker build --tag ghcr.io/winf-instructors/security_py_ctf:latest .
+        cd src
+        docker build --tag ghcr.io/winf-instructors/security_command_injection:latest .
     - name: Push the Docker image
       run: |
-        docker push ghcr.io/winf-instructors/security_py_ctf:latest
+        docker push ghcr.io/winf-instructors/security_command_injection:latest
