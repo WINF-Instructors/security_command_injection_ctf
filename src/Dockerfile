@@ -26,8 +26,6 @@ RUN chown -R www:www /www
 # Setup permissions
 RUN chown -R www:www /var/lib/nginx
 
-# Expose the port nginx is listening on
-EXPOSE 1337
 
 # start supervisord
 ENTRYPOINT ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
